@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EASTWOODS COLLEGE OF SCIENCE AND TECHNOLOGY</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title> Simple Calculator</title>
+    <link rel="stylesheet" href="styles.css"
+    type="text/css"/>
+</head>
+<div class="flex div"><div><img id="ig"src="EDU.PNG" class="e" ></div><div>
+<body>
+    <div>
+        <h2> Simple Calculator</h2><hr/>
+        <input type="number" placeholder="" 
+        id="num1"/>
+         <br/>
+        <input type="number" placeholder="" 
+        id="num2"/>
+        <br/>
+        <button id="add" onclick="add()">+</button>
+        <button id="sub" onclick="sub()">-</button>
+        <button id="mul"  onclick="mul()">x</button>
+        <button id="div"  onclick="div()">/</button><br/>
+        <button id="About" onclick="about()" >About</button>
+        <button id= "Clear" onclick="erase()" >Clear</button>
+        <input type="number" readonly id="result"/>
+    </div>
+    <script type="text/javascript">
+        function add(){
+            var n1 = parseFloat(document.getElementById("num1").value)
+            var n2 = parseFloat(document.getElementById("num2").value)
+            var add = n1+n2
+            document.getElementById("result").value = add
+        }
+        function sub(){
+            var n1 = parseFloat(document.getElementById("num1").value)
+            var n2 = parseFloat(document.getElementById("num2").value)
+            var sub = n1-n2
+            document.getElementById("result").value = sub
+        }
+        function mul(){
+            var n1 = parseFloat(document.getElementById("num1").value)
+            var n2 = parseFloat(document.getElementById("num2").value)
+            var mul = n1*n2
+            document.getElementById("result").value = mul
+        }
+        function div(){
+            var n1 = parseFloat(document.getElementById("num1").value)
+            var n2 = parseFloat(document.getElementById("num2").value)
+            var div = n1/n2
+            document.getElementById("result").value = div
+        }
+        function about(){
+           window.alert("Rodel Morales Simple Calculator")
+        }
+        function erase(){
+            document.getElementById('num1').value = '';
+         document.getElementById('num2').value = '';
+           document.getElementById("result").value = '';
+        }
+    </script>
+</html>
